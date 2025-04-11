@@ -1,16 +1,23 @@
 import "./Home.css";
-import home from "./Home.jpg";
-import towing from "./towing.jpeg";
-import fuel from "./fueldelivery.jpg";
-import flat_tire from "./flat_tire.jpeg";
-import battery from "./battery.jpeg";
-import lockout from "./lockout.png";
-import diagnostics from "./diagnostics.avif";
+import home from "./images/Home.jpg";
+import towing from "./images/towing.jpeg";
+import fuel from "./images/fueldelivery.jpg";
+import flat_tire from "./images/flat_tire.jpeg";
+import battery from "./images/battery.jpeg";
+import lockout from "./images/lockout.png";
+import diagnostics from "./images/diagnostics.avif";
 // import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
     const navigate = useNavigate();
+
+    const scrollToHome = () => {
+        const homeSection = document.getElementById("homepage");
+        if (homeSection) {
+            homeSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     const scrollToServices = () => {
         const servicesSection = document.getElementById("services");
@@ -27,17 +34,17 @@ function Home() {
     };
 
     return (
-        <div className="home">
+        <div className="home" id="homepage">
             <nav className="navbar">
                 <div className="logo">
                     <h1>Breakdown Assist</h1>
                 </div>
                 <div className="nav-links">
-                    <span>Home</span>
+                    <span onClick={scrollToHome}>Home</span>
                     <span onClick={scrollToServices}>About</span>
                     <span onClick={scrollToContact}>Contact Us</span>
                     <span className="nav-link" onClick={() => navigate('/login')}>Sign In</span>
-                    <span className="nav-link" onClick={() => navigate('/register')}>sign Up</span>
+                    <span className="nav-link" onClick={() => navigate('/register')}>Sign Up</span>
                 </div>
             </nav>
             <div className="content-section">

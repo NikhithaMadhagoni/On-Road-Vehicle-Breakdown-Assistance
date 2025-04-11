@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
-const PORT = 3020
+const PORT = 5000
 const routes = require("./routes/indexroutes.js")
 const mongoose = require('mongoose')
+const cors = require("cors");
 
+app.use(cors());
 app.use(express.json());
 
 mongoose.connect(`mongodb://localhost:27017/ORVBA`)

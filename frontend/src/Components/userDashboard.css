@@ -1,0 +1,144 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 15px;
+    position: fixed;
+    width: 98%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links span {
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s;
+    color: white;
+}
+
+.nav-links span:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Profile Icon */
+.profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-icon:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    margin-top: 80px;
+    /* Offset for fixed navbar */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Service Provider List */
+.service-provider-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Service Provider Card */
+.service-provider-card {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 20px 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 300px;
+}
+
+.service-provider-card:hover {
+    transform: scale(1.05);
+}
+
+.provider-info {
+    display: flex;
+    margin-left: -250px;
+    border-width: 50px;
+}
+
+.provider-info h2 {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.provider-business,
+.provider-location {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Connect Button */
+.connect-btn {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 15px 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 45px 650px
+}
+
+.connect-btn:hover {
+    background-color: #e6b800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links span {
+        font-size: 1rem;
+    }
+
+    .profile-icon {
+        width: 35px;
+        height: 35px;
+    }
+}

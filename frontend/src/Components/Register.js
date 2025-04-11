@@ -9,7 +9,7 @@ function Register() {
         if (userType === "user") {
             navigate("/user-registration"); // Navigate to the User registration page
         } else if (userType === "service-provider") {
-            navigate("/service-provider-registration"); // Navigate to the Service Provider registration page
+            navigate("/ServiceProvider-Registration"); // Navigate to the Service Provider registration page
         }
     };
 

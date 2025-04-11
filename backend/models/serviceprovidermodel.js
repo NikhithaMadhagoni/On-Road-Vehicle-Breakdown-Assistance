@@ -6,8 +6,7 @@ const serviceprovider = mongoose.Schema({
     password: { type: String, required: true },
     business_name: { type: String, required: true },
     service_type: {
-        type: String,
-        enum: ['flat tire', 'battery jump-start', 'fuel delivery', 'towing', 'lockout assistance', 'vehicle diagnostics', 'other'],
+        type: [String],
         required: true
     },
     service_area: { type: String, required: true },

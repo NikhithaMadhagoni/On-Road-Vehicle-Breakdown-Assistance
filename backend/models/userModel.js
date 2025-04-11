@@ -6,11 +6,11 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true },
     contact: { type: Number, required: true },
     vehicleType: {
-        type: Number,
-        enum: [2, 4, 6], required: true,
+        type: [String],
+        required: true,
     },
     location: {
-        lat: { type: Number, reuired: true },
+        lat: { type: Number, required: true },
         long: { type: Number, required: true }
     }
 });

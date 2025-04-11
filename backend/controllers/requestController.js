@@ -3,7 +3,7 @@ const User = require('../models/userModel');
 const ServiceProvider = require('../models/serviceprovidermodel');
 
 exports.pending = async (req, res) => {
-    const { userId, servicerId } = req.body;
+    const { userId, servicerId, vehicle } = req.body;
     try {
         const user = await User.findById(userId)
         if (!user) {
@@ -16,6 +16,7 @@ exports.pending = async (req, res) => {
         const request = new Request({
             userId: userId,
             servicerId: servicerId,
+            vehicleType: vehicle,
             userlocation: user.location,
             servicerlocation: sp.location,
             status: "pending"

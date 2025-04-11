@@ -1,0 +1,70 @@
+.provider-details-container {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.provider-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #2b2b2b;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.provider-card:hover {
+    transform: translateY(-5px);
+}
+
+.provider-name {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.provider-info {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.provider-info label {
+    font-weight: bold;
+    color: #ddd;
+    display: inline-block;
+    width: 150px;
+}
+
+.connect-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-content: center;
+}
+
+.connect-btn:hover {
+    background-color: #e6b800;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #ffcc00;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    color: #e6b800;
+}
